@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div {
+    width: 900px;
+    height: auto;
+    margin: auto;
+}
+
+.main-box {
+    width: 880px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.box {
+    width: 200px;
+    background-color: saddlebrown;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px 10px;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box .box-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.box .box-content::before,
+.box .box-content::after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 47%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: skew(90deg);
+    transition: all 0.5s;
+    opacity: 0;
+    background-color: rgba(26, 20, 20, 0.801);
+}
+
+.box .box-content::before {
+    top: -20%;
+}
+
+.box .box-content::after {
+    bottom: -20%;
+}
+
+.box:hover .box-content::before {
+    transform: skew(0deg);
+    opacity: 0.8;
+    top: 3%;
+}
+
+.box:hover .box-content::after {
+    transform: skew(0deg);
+    opacity: 0.8;
+    bottom: 3%;
+}
+
+.box .content {
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 0.5s;
+    transform: rotate(90deg);
+    opacity: 0;
+    z-index: 1;
+}
+
+.box .content .slide {
+    margin-left: -10px;
+    list-style-type: none;
+}
+
+.box .content ul li {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.box .content ul li i {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    line-height: 1.5;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: rgba(0, 247, 255, 0.863);
+}
+
+.box:hover .content {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.box .content ul li i:hover {
+    text-align: center;
+    background-color: rgb(10, 97, 209);
+    border-radius: 50px;
+}
+
+.box:hover .content ul li i {
+    transform: translate(30deg);
+}
+
+.main-box2 {
+    width: 880px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+
+/* Hover Effect2 */
+
+.rotate {
+    width: 200px;
+    height: 201px;
+    position: relative;
+    border: 1px solid;
+    overflow: hidden;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.rotate img {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    background-size: cover;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.rotate:hover img {
+    transform: scale(0);
+}
+
+.rotate .rotate-content {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    background-color: brown;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+    transition: 0.2s;
+}
+
+.rotate:hover .rotate-content {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.2s;
+}
